@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restful</title>
+</head>
+<body>
+    <h1>Comments :</h1>
+        <% if(locals.comments){ %>
+            <ul>
+                <% comments.forEach((comment)=>{  %>
+                    <p>
+                    <li><%= comment["comment"] %>-<%=  comment["username"] %>
+                    <a href="/comments/<%= comment["id"] %>" >details</a>
+                    </li>
+                    
+                </p>
+                <%}) %>
+            </ul>
+
+        <% } %>
+
+        <a href="/comments/new" >new comment</a>
+     
+</body>
+</html>

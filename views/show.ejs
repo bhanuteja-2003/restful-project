@@ -8,6 +8,7 @@
 <body>
     <p>Comment id : <%= comment.id %></p>
     <p>Comment username : <%= comment.username %></p>
+    <p>Comment : <%= comment['comment'] %></p>
     <a href="/comments">back to comments</a>
     <a href="/comments/<%= comment.id%>/edit">Edit this comment</a>
     <form action="/comments/<%=comment.id %>?_method=delete" method="post" >
